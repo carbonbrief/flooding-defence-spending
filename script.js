@@ -1,8 +1,12 @@
 		function init(){
 
-		//	var sublayer;
+		var sublayers;
+		
+		//define sublayers
 			
 			var layer;
+			
+			
 			// create leaflet map and define some properties
         var map = L.map('map', { 
           zoomControl: true,
@@ -20,22 +24,24 @@
 			cartodb.createLayer(map,layerUrl)
 				.addTo(map)
 				.on('done', function(layer){
-					layer = layers[1];
-					layer.getSublayer(1).hide();
+					layer.getSubLayer(0).show();
+					layer.getSubLayer(1).hide();
 
 					var LayerActions = {
 						reset: function(){
-							layer.getSublayer(1).show();
-							layer.getSublayer(2).hide();
+							layer.getSubLayer(0).show();
+							layer.getSubLayer(1).hide();
+							return true;
 						},
 						byParty: function(){
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Onshore wind' OR type = 'Offshore wind'");
+							layer.getSubLayer(1).show();
+							layer.getSubLayer(0).hide();
 							return true;
 						},
 						byHouse: function(){
 							
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Solar'");
-							return true;
+						//	sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Solar'");
+						//	return true;
 						}
 					
 					}
@@ -49,28 +55,21 @@
 				});
 		}
 		
-		$(document).ready(function(){
-    $('#selector').on('change', function() {
-      if ( this.value == 'reset' && $(window).width() >= 650)
+//		$(document).ready(function(){
+//    $('#selector').on('change', function() {
+//      if ( this.value == 'reset' && $(window).width() >= 650)
       //.....................^.......
-      {
-		$('.total').hide();
-        $("#alltotal").show();
-      }
-	  else if (this.value =='layer11' && $(window).width() >= 650) {
-		$('.total').hide();
-		$("#renewablestotal").show();
-}
-	else if (this.value =='layer12' && $(window).width() >= 650) {
-		$('.total').hide();
-		$("#nonrenewablestotal").show();
-}
-      else
-      {
-        $(".total").hide();
-      }
-    });
-});
+//      {
+//		$('.total').hide();
+ //       $("#alltotal").show();
+  //    }
+	  
+  //    else
+ //     {
+ //       $(".total").hide();
+ //     }
+ //   });
+ //});
 
 
 		window.onload = init;
