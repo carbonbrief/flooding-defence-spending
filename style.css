@@ -49,14 +49,29 @@
 		font-family: "PT Sans", Arial;
       }
 	  
-	  #Key {
+	  #Key1 {
   		position: absolute;
         	bottom: 26px;
         	right: 10px;
         	z-index: 9000;
-  		height: 68px;
-  		width: 202px;
-  		background-image:url(Key.png);
+  		height: 80px;
+  		width: 230px;
+  		background-image:url(Key1.png);
+  		background-repeat: no-repeat;
+	  border-radius: 5px;
+      -webkit-box-shadow: 6px 10px 23px 5px rgba(102,102,102,0.2);
+      -moz-box-shadow: 6px 10px 23px 5px rgba(102,102,102,0.2);
+      box-shadow: 6px 10px 23px 5px rgba(102,102,102,0.2);
+	  }
+		
+	  #Key2 {
+  		position: absolute;
+        	bottom: 26px;
+        	right: 10px;
+        	z-index: 9000;
+  		height: 290px;
+  		width: 230px;
+  		background-image:url(Key2.png);
   		background-repeat: no-repeat;
 	  border-radius: 5px;
       -webkit-box-shadow: 6px 10px 23px 5px rgba(102,102,102,0.2);
@@ -69,7 +84,7 @@
       	top: 10px;
       	right: 10px;
 		z-index: 9000;
-		  width: 140px;
+		  width: 170px;
 		height: 28px;
 		  font-family: "PT Sans", Arial;
 		  font-weight: bold;
