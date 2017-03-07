@@ -55,21 +55,31 @@
 				});
 		}
 		
-//		$(document).ready(function(){
-//    $('#selector').on('change', function() {
-//      if ( this.value == 'reset' && $(window).width() >= 650)
+		$(document).ready(function(){
+			
+			$("#Key2").hide();
+      $("#Key1").show();
+			
+    $('#selector').on('change', function() {
+      if ( this.value == 'reset' && $(window).width() >= 650)
       //.....................^.......
-//      {
-//		$('.total').hide();
- //       $("#alltotal").show();
-  //    }
+      {
+				$("#Key2").hide();
+        $("#Key1").show();
+      }
 	  
-  //    else
- //     {
- //       $(".total").hide();
- //     }
- //   });
- //});
+      else if ( this.value == 'byParty' && $(window).width() >= 650)
+      {
+        $("#Key2").show();
+				$("#Key1").hide();
+      }		
+			else
+      {
+				$("#Key2").hide();
+        $("#Key1").show();
+      }
+    });
+ });
 
 
 		window.onload = init;
