@@ -215,57 +215,8 @@
 							
 							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Solar'");
 							return true;
-						},
-						layer3: function(){
-							
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Biomass' OR type = 'Biomass CHP'");
-							return true;
-						},
-						layer4: function(){
-							
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Hard coal' OR type = 'Hard coal CHP' OR type = 'Lignite' OR type = 'Lignite CHP'");
-							return true;
-						},
-						layer5: function(){
-							
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Gas' OR type = 'Landfill gas' OR type = 'Mine gas' OR type = 'Gas CHP' OR type = 'Green gas' OR type = 'Sewage gas'");
-							return true;
-						},
-						layer6: function(){
-							
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Nuclear'");
-							return true;
-						},
-						layer7: function(){
-							
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Waste' OR type = 'Waste CHP'");
-							return true;
-						},
-						layer8: function(){
-							
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Hydro' OR type = 'Pumped hydro'");
-							return true;
-						},
-						layer10: function(){
-							
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE CHP = 'CHP'");
-							return true;
-						},
-						layer11: function(){
-							
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE renewable = 'Renewable'");
-							return true;
-						},
-						layer12: function(){
-							
-							sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE renewable = 'Non-renewable'");
-							return true;
-						},
-						layer13: function(){
-							
-							sublayer.setSQL("SELECT * FROM Power_sources_in_Germany WHERE type = 'Other' OR type = 'Other CHP' OR type = 'Geothermal' OR type = 'Oil' OR type = 'Oil CHP'");
-							return true;
 						}
+					
 					}
 
 				$('#selector').change(function() {
