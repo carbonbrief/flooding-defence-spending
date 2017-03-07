@@ -4,25 +4,7 @@
         margin: 0;
       }
 	  
-	  #map_title {
-		  font-family: "PT Sans Narrow", Arial;
-		  font-size: 34px;
-		  color: #282828;
-		  top: 10px;
-		  left: 48px;
-		  width: 325px;
-		  height: 51px;
-		  z-index: 9000;
-		  position: absolute;
-		  background-image:url(Background-image-for-map3.png);
-		  background-repeat: no-repeat;
-		  padding-left: 20px;
-		  padding-top: 5px;
-		  border-radius: 5px;
-	      -webkit-box-shadow: 6px 10px 23px 5px rgba(102,102,102,0.2);
-	      -moz-box-shadow: 6px 10px 23px 5px rgba(102,102,102,0.2);
-	      box-shadow: 6px 10px 23px 5px rgba(102,102,102,0.2);
-		  }
+	  
 	  
 	  select {
    -webkit-appearance: none;
@@ -41,7 +23,7 @@
       #selector_menu {
       	position: absolute;
       	top: 10px;
-      	right: 10px;
+      	left: 48px;
       	z-index: 9000;
 		box-shadow: none;
 	    border:0px;
@@ -84,10 +66,10 @@
 	  
 	  .total {
 		  position: absolute;
-      	top: 72px;
-      	left: 48px;
+      	top: 10px;
+      	right: 10px;
 		z-index: 9000;
-		  width: 220px;
+		  width: 140px;
 		height: 28px;
 		  font-family: "PT Sans", Arial;
 		  font-weight: bold;
