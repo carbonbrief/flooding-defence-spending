@@ -57,8 +57,18 @@
 		
 		$(document).ready(function(){
 			
-			$("#Key2").hide();
-      $("#Key1").show();
+			if ($(window).width() >= 650)
+				
+			{
+				$("#Key2").hide();
+	      $("#Key1").show();
+			}
+			
+			else {
+				$("#Key2").hide();
+	      $("#Key1").hide();
+			}
+			
 			
     $('#selector').on('change', function() {
       if ( this.value == 'reset' && $(window).width() >= 650)
@@ -76,7 +86,7 @@
 			else
       {
 				$("#Key2").hide();
-        $("#Key1").show();
+        $("#Key1").hide();
       }
     });
  });
