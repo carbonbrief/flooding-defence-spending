@@ -11,7 +11,7 @@
         var map = L.map('map', { 
           zoomControl: true,
 		  scrollWheelZoom: false,
-          center: [53.6, -3.5],
+          center: [53.3, -2.4],
           zoom: 6
         })
 
@@ -20,7 +20,7 @@
           attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
         }).addTo(map);
 
-			var layerUrl = 'https://carbonbrief.carto.com/api/v2/viz/b0ee3c0e-001e-11e7-a398-0ee66e2c9693/viz.json' ;
+			var layerUrl = 'https://carbonbrief.carto.com/api/v2/viz/8f726db0-0e2a-11e7-8339-0e233c30368f/viz.json' ;
 			cartodb.createLayer(map,layerUrl)
 				.addTo(map)
 				.on('done', function(layer){
@@ -37,11 +37,6 @@
 							layer.getSubLayer(1).show();
 							layer.getSubLayer(0).hide();
 							return true;
-						},
-						byHouse: function(){
-							
-						//	sublayer.setSQL("SELECT * FROM power_sources_in_germany WHERE type = 'Solar'");
-						//	return true;
 						}
 					
 					}
