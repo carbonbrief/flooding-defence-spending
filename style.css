@@ -99,20 +99,6 @@
 	      box-shadow: 6px 10px 23px 5px rgba(102,102,102,0.2);
 		  }
 		  
-	#renewablestotal {
-		border-left: 6px solid rgba(68,68,68,.65);
-		width: 232px;
-	}
-	
-	#alltotal {
-		border-left: 6px solid rgba(68,68,68,.65);
-		width: 149px;
-	}
-	
-	#nonrenewablestotal {
-		border-left: 6px solid rgba(68,68,68,.65);
-		width: 252px;
-	}
 	
 	
 	#logo {

@@ -1,3 +1,5 @@
+	//map by Rosamund Pearce for Carbon Brief
+	
 		function init(){
 
 		var sublayers;
@@ -26,19 +28,27 @@
 				.on('done', function(layer){
 					layer.getSubLayer(0).show();
 					layer.getSubLayer(1).hide();
+					layer.getSubLayer(2).hide();
 
 					var LayerActions = {
 						reset: function(){
 							layer.getSubLayer(0).show();
 							layer.getSubLayer(1).hide();
+							layer.getSubLayer(2).hide();
 							return true;
 						},
 						byParty: function(){
 							layer.getSubLayer(1).show();
 							layer.getSubLayer(0).hide();
+							layer.getSubLayer(2).hide();
+							return true;
+						},
+						twentyOne: function(){
+							layer.getSubLayer(2).show();
+							layer.getSubLayer(0).hide();
+							layer.getSubLayer(1).hide();
 							return true;
 						}
-					
 					}
 
 				$('#selector').change(function() {
@@ -57,26 +67,40 @@
 			{
 				$("#Key2").hide();
 	      $("#Key1").show();
+				$("#Total1").show();
+				$("#Total2").hide();
 			}
 			
 			else {
 				$("#Key2").hide();
 	      $("#Key1").hide();
+				$("#Total1").hide();
+				$("#Total2").hide();
 			}
 			
 			
     $('#selector').on('change', function() {
       if ( this.value == 'reset' && $(window).width() >= 650)
-      //.....................^.......
       {
 				$("#Key2").hide();
         $("#Key1").show();
+				$("#Total1").show();
+				$("#Total2").hide();
       }
 	  
       else if ( this.value == 'byParty' && $(window).width() >= 650)
       {
         $("#Key2").show();
 				$("#Key1").hide();
+				$("#Total1").show();
+				$("#Total2").hide();
+      }	
+      else if ( this.value == 'twentyOne' && $(window).width() >= 650)
+      {
+				$("#Key2").hide();
+        $("#Key1").show();
+				$("#Total1").hide();
+				$("#Total2").show();
       }		
 			else
       {
