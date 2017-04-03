@@ -1,3 +1,5 @@
+	//map by Rosamund Pearce for Carbon Brief
+	
 		function init(){
 
 		var sublayers;
