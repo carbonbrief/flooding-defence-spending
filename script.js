@@ -65,11 +65,15 @@
 			{
 				$("#Key2").hide();
 	      $("#Key1").show();
+				$("#Total1").show();
+				$("#Total2").hide();
 			}
 			
 			else {
 				$("#Key2").hide();
 	      $("#Key1").hide();
+				$("#Total1").hide();
+				$("#Total2").hide();
 			}
 			
 			
@@ -78,17 +82,23 @@
       {
 				$("#Key2").hide();
         $("#Key1").show();
+				$("#Total1").show();
+				$("#Total2").hide();
       }
 	  
       else if ( this.value == 'byParty' && $(window).width() >= 650)
       {
         $("#Key2").show();
 				$("#Key1").hide();
+				$("#Total1").show();
+				$("#Total2").hide();
       }	
       else if ( this.value == 'twentyOne' && $(window).width() >= 650)
       {
 				$("#Key2").hide();
         $("#Key1").show();
+				$("#Total1").hide();
+				$("#Total2").show();
       }		
 			else
       {
